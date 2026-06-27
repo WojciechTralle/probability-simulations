@@ -16,4 +16,4 @@ Python simulations and visualizations inspired by probability theory and mathema
 ## Author
 
 Wojciech Tralle
-Ph.D. in Mathematics. 
+Ph.D. in Mathematics
