@@ -7,6 +7,7 @@ Python simulations and visualizations inspired by probability theory and mathema
 ### Distributions
 
 - Binomial distribution
+- Poisson Distribution
 
 ## Requirements
 
