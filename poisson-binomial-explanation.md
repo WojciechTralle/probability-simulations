@@ -27,7 +27,7 @@ Therefore,
 
 Binomial(100, 0.02) ≈ Poisson(2).
 
-![Poisson vs Binomial](../images/poisson_vs_binomial.png)
+![Poisson vs Binomial](poisson_vs_binomial.png)
 
 The two distributions also have almost identical variances:
 
