@@ -32,6 +32,8 @@ The two distributions also have almost identical variances:
 - Var(Binomial) = np(1-p) = 1.96,
 - Var(Poisson) = λ = 2.
 
+## Overlay Plot
+
 ![Poisson vs Binomial](images/poisson_vs_binomial.png)
 
 Consequently, the overlay plot shows that the pmfs nearly coincide.
