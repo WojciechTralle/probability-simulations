@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 Solution to Exercise 3.2.7 from Hogg.
 
@@ -9,10 +8,12 @@ Obtain an overlay plot of the pmfs of:
 
 Explain why these distributions are approximately the same.
 """
+from pathlib import Path
 
-from scipy.stats import poisson, binom
-import matplotlib.pyplot as plt
 import math
+
+import matplotlib.pyplot as plt
+from scipy.stats import binom, poisson
 
 
 def plot_poisson_binomial_overlay(mu, n, p):
@@ -28,7 +29,7 @@ def plot_poisson_binomial_overlay(mu, n, p):
     max_x = int(
         max(
             mu + 5 * poisson_sd,
-            n * p + 5 * binomial_sd
+            n * p + 5 * binomial_sd,
         )
         + 5
     )
@@ -44,7 +45,7 @@ def plot_poisson_binomial_overlay(mu, n, p):
         x,
         poisson_probabilities,
         marker="o",
-        label=f"Poisson: μ = {mu}"
+        label=f"Poisson: μ = {mu}",
     )
 
     plt.plot(
@@ -52,7 +53,7 @@ def plot_poisson_binomial_overlay(mu, n, p):
         binomial_probabilities,
         marker="x",
         linestyle="--",
-        label=f"Binomial: n = {n}, p = {p}"
+        label=f"Binomial: n = {n}, p = {p}",
     )
 
     plt.xlabel("x")
@@ -61,50 +62,23 @@ def plot_poisson_binomial_overlay(mu, n, p):
     plt.xticks(list(x))
     plt.grid(True, alpha=0.3)
     plt.legend()
+
+        # Save the figure in the same folder as this Python script.
+    output_file = (
+        Path(__file__).resolve().parent
+        / "poisson_vs_binomial.png"
+    )
+
+    plt.savefig(
+        output_file,
+        dpi=300,
+        bbox_inches="tight",
+    )
+
+    print(f"Saved to: {output_file}")
+
     plt.show()
 
 
 if __name__ == "__main__":
     plot_poisson_binomial_overlay(mu=2, n=100, p=0.02)
-    
-#plt.savefig("images/poisson_vs_binomial.png", dpi=300, bbox_inches="tight")    
-
-    
-    
-=======
-# Poisson Approximation to the Binomial Distribution
-
-This program overlays the probability mass functions of
-
-- Poisson(2),
-- Binomial(100, 0.02).
-
-## Why are they nearly identical?
-
-The Poisson distribution is an approximation to the Binomial distribution
-when
-
-- the number of trials n is large,
-- the probability of success p is small,
-- the product np remains fixed.
-
-Here
-
-n = 100,
-p = 0.02,
-
-so
-
-np = 2.
-
-Therefore,
-
-Binomial(100, 0.02) ≈ Poisson(2).
-
-The two distributions also have almost identical variances:
-
-- Var(Binomial) = np(1-p) = 1.96,
-- Var(Poisson) = λ = 2.
-
-Consequently, the overlay plot shows that the pmfs nearly coincide.
->>>>>>> 978ced7b4bd3cdbda3d0718bb40027db638cb559
