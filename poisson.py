@@ -1,4 +1,4 @@
-# Visualizing Poisson probability mass functions in Python.
+""" Visualizing Poisson probability mass functions in Python."""
 from scipy.stats import poisson
 import matplotlib.pyplot as plt
 import math

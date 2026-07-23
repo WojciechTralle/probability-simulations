@@ -1,5 +1,5 @@
-# Exercise 3.1.8 from Hogg's Introduction to Mathematical Statistics.
-# Visualizing binomial probability mass functions in Python.
+""" Exercise 3.1.8 from Hogg's Introduction to Mathematical Statistics.
+ Visualizing binomial probability mass functions in Python."""
 
 import math
 import matplotlib.pyplot as plt
