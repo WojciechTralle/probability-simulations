@@ -34,6 +34,6 @@ The two distributions also have almost identical variances:
 
 ## Overlay Plot
 
-![Poisson vs Binomial](images/poisson_vs_binomial.png)
+![Poisson vs Binomial](poisson_vs_binomial.png)
 
 Consequently, the overlay plot shows that the pmfs nearly coincide.
