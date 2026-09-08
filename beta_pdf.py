@@ -35,3 +35,9 @@ if __name__ == "__main__":
     # Symmetric Beta distributions.
     for value in [0.5, 1, 2, 5, 10]:
         plot_beta(value, value)
+        
+        
+# Exercise 3.3.13 (Hogg): obtain plots of beta pdfs for alpha = 5 and
+# beta = 1,2,5,10,20.
+# for beta in [1, 2, 5, 10, 20]:
+#   plot_beta(5, beta)

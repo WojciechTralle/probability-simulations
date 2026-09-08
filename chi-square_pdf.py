@@ -61,11 +61,16 @@ if __name__ == "__main__":
 #print(chi2.cdf(12.6,df=nu) - chi2.cdf(1.64,df=nu))
 
 # Example 4
-nu = 4
+#nu = 4
 # find P(X < 9.49) = P(X <= 9.49)
-print(chi2.cdf(9.49, nu))
+#print(chi2.cdf(9.49, nu))
 
-
+# Exercise 3.3.11 (Hogg): plot the pdfs of chi-square distributions 
+# with degrees of freedom r = 1,2,5,10,20.
+#if __name__ == "__main__":
+    # Experiments
+#    for nu in [1, 2, 5, 10, 20]:
+#        plot_chi_square(nu)
 
 
 
