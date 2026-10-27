@@ -11,24 +11,25 @@ import numpy as np
 # sigma = 1
 
 # P(X <= x)
-# print(norm.cdf(1, loc=mu, scale=sigma))
+# print(norm.cdf(x, loc=mu, scale=sigma))
 
 # P(X >= x)
-# print(norm.sf(1, loc=mu, scale=sigma))
+# print(norm.sf(x, loc=mu, scale=sigma))
 
 # P(a <= X <= b)
-# print(norm.cdf(1, loc=mu, scale=sigma)
-#       - norm.cdf(-1, loc=mu, scale=sigma))
+# print(norm.cdf(b, loc=mu, scale=sigma)
+#       - norm.cdf(a, loc=mu, scale=sigma))
 
 # Probability density at x
-# print(norm.pdf(0, loc=mu, scale=sigma))
+# print(norm.pdf(x, loc=mu, scale=sigma))
 
 
 def plot_normal(mu, sigma):
     """Plot the probability density function of a N(mu, sigma^2) distribution."""
 
     # Choose a plotting range containing essentially
-    # all of the probability mass.
+    # all of the probability mass 
+    # 4 standard deviations away from the mean so about 99.99366575163338 %.
     x = np.linspace(mu - 4 * sigma, mu + 4 * sigma, 1000)
 
     # Calculate the probability density function.
