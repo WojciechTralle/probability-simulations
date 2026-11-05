@@ -23,6 +23,14 @@ import numpy as np
 # Probability density at x
 # print(norm.pdf(x, loc=mu, scale=sigma))
 
+# Inverse cumulative distribution function (quantile)
+# Find x such that P(X <= x) = p.
+# print(norm.ppf(p, loc=mu, scale=sigma)) 
+# Examples
+# Standard normal quantiles
+# print(norm.ppf(0.90))
+# print(norm.ppf(0.95))
+
 
 def plot_normal(mu, sigma):
     """Plot the probability density function of a N(mu, sigma^2) distribution."""
